@@ -10,7 +10,7 @@ const mobilityReducer = (state = mobilityInitialState, action) => {
     switch(action.type) {
         case BUY_PHONE:
         return {
-            ... state,
+            ...state,
             phones: state.phones -1
         }
         default: return state
