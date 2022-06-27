@@ -5,7 +5,7 @@ import buyTv from '../redux/tv/actionTv';
 
 function TvContainer() {
 
-    const tvs = useSelector((state) => state.tvs);
+    const tvs = useSelector((state) => state.television.tvs);
     const dispatch = useDispatch();
 
     return (

@@ -5,7 +5,7 @@ import buyPhone from '../redux/phone/actionPhone';
 
 function PhoneContainer() {
 
-    const phones = useSelector((state) => state.phones);
+    const phones = useSelector((state) => state.phone.phones);
     const dispatch = useDispatch();
 
     return (
