@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import phone from '../../images/phone.png';
-import buyPhone from '../../redux/mobility/mobilityAction';
+import phone from '../images/phone.png';
+import buyPhone from '../redux/phone/actionPhone';
 
-function PhoneComponent() {
+function PhoneContainer() {
 
     const phones = useSelector((state) => state.phones);
     const dispatch = useDispatch();
@@ -19,8 +19,7 @@ function PhoneComponent() {
         </div>
     );
 }
-
-export default PhoneComponent;
+export default PhoneContainer;
 
 // Méthodes mapStateToProps & mapDispatchToProps
 // import React from 'react';

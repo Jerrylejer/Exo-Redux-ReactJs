@@ -1,12 +1,11 @@
 import { BUY_PHONE } from './type';
 
-const mobilityInitialState = {
+const phoneInitialState = {
     phones: 5,
-    tablets: 10
 };
 
 // Reducer
-const mobilityReducer = (state = mobilityInitialState, action) => {
+const reducerPhone = (state = phoneInitialState, action) => {
     switch(action.type) {
         case BUY_PHONE:
         return {
@@ -17,4 +16,4 @@ const mobilityReducer = (state = mobilityInitialState, action) => {
     }
 }
 
-export default mobilityReducer;
+export default reducerPhone;
