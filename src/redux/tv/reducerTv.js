@@ -10,10 +10,11 @@ const reducerTv = (state = tvInitialState, action) => {
         case BUY_TV:
         return {
             ...state,
-            tvs: state.tvs -1
+            tvs: state.tvs - action.payload
         }
         default: return state
     }
 }
 
 export default reducerTv;
+

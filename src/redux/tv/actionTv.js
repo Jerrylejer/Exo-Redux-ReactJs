@@ -1,8 +1,9 @@
 import { BUY_TV } from './type';
 
-const buyTv = () => {
+const buyTv = (tvQuantity) => {
     return {
-        type: BUY_TV
+        type: BUY_TV,
+        payload: tvQuantity
     }
 };
 
