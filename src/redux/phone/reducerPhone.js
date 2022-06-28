@@ -1,5 +1,6 @@
 import { BUY_PHONE } from './type';
 
+// Notre state de base
 const phoneInitialState = {
     phones: 5,
 };

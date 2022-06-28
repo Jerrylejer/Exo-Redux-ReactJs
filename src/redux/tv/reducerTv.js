@@ -1,5 +1,6 @@
 import { BUY_TV } from './type';
 
+// Notre state de base
 const tvInitialState = {
     tvs: 9,
 };
