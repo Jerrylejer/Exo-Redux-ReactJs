@@ -17,7 +17,11 @@ function App() {
                 <div className='tv__container'>
                     <TvContainer />
                 </div>
-                    <CommentsContainer />
+            </div>
+            <hr />
+            <div className='comment__container'>
+                <p><b>Commentaires:</b></p>
+                <CommentsContainer />
             </div>
         </Provider>
     );

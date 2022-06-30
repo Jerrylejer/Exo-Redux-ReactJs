@@ -22,20 +22,39 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { apiCall } from '../redux/comment/actionComment';
+import '../App.css';
 
 const CommentsContainer = ({ apiData, apiFetch }) => {
     console.log(apiData);
 
+    // déclenchement apiCall au montage du composant + quand apiCall est modifié
     useEffect(() => {
         apiFetch();
     }, [apiFetch]);
 
-    return <div>Hello</div>;
+    // Conditions ternaire pour l'affichage des données liée aux 3 actions
+    const dataFeedback = apiData.isLoading ? (
+        <p>Loading ...</p>
+    ) : apiData.error ? (
+        <p>{apiData.error}</p>
+    ) : (
+        apiData.comments.map((commentItem) => {
+            return (
+                <div key={commentItem.id} className='comment'>
+                    <p>{commentItem.body}</p>
+                </div>
+            );
+        })
+    );
+
+    return (<>
+        {dataFeedback}
+    </>);
 };
 
 const mapStateToProps = (state) => {
     return {
-        apiData: state.comment.comments,
+        apiData: state.comment,
     };
 };
 

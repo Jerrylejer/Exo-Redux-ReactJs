@@ -15,6 +15,19 @@
     padding: 3rem;
 }
 
+.comment__container {
+text-align: center;
+}
+
+.comment__container > p {
+    font-size: 1.5rem;
+    }
+
+.comment {
+    padding: 2rem;
+    width: 100%; 
+}
+
 .btn__container {
     display: flex;
 }
